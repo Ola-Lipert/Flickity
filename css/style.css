@@ -1,9 +1,11 @@
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+body { font-family: 'Open Sans', sans-serif; }
 
 .carousel { background: #EEE; }
 
-.carousel-cell { width: 100%; height: 50vh; min-height: 250px; margin-right: 10px; background-size: cover; }
+.carousel-cell { position: relative; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 100%; height: 600px; margin-right: 10px; background-size: cover; }
 
-.container { max-width: 1200px; text-align: center; }
+.carousel-cell .container { position: absolute; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; width: 80%; margin: auto; }
+
+.carousel-cell .container h2 { text-align: center; font-size: 5vw; font-weight: 800; font-variant: small-caps; text-shadow: 2px 2px darkgrey; }

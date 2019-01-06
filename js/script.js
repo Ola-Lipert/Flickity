@@ -11,5 +11,11 @@
     pageDots: false
     });
 
+    // restart
+    var btnRestart = document.querySelector('.restart-button');
+    btnRestart.addEventListener('click', function () {
+        flkty.select(0);
+    });
+
     
 

@@ -2,6 +2,10 @@
 
 body { font-family: 'Open Sans', sans-serif; }
 
+p .btn-cells { background-color: #fff; }
+
+p .btn-cells a { color: #333; text-decoration: none; }
+
 .carousel { background: #EEE; }
 
 .carousel-cell { position: relative; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 100%; height: 600px; margin-right: 10px; background-size: cover; }
@@ -9,3 +13,11 @@ body { font-family: 'Open Sans', sans-serif; }
 .carousel-cell .container { position: absolute; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; width: 80%; margin: auto; }
 
 .carousel-cell .container h2 { text-align: center; font-size: 5vw; font-weight: 800; font-variant: small-caps; text-shadow: 2px 2px darkgrey; }
+
+.button-group { position: relative; }
+
+.button-group .restart-button { position: absolute; left: 5em; bottom: 2.5em; transition: 0.5s; }
+
+.button-group .restart-button:hover { background-color: black; color: #fff; }
+
+.progress-bar { height: 20px; width: 0; background: #333; }

@@ -6,6 +6,15 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+p {
+    .btn-cells {
+        background-color: #fff;
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+}
 .carousel {
   background: #EEE;
 }
@@ -36,3 +45,26 @@ body {
         }
     }
 }
+
+.button-group {
+    position: relative;
+
+    .restart-button {
+        position: absolute;
+        left: 5em;
+        bottom: 2.5em;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: black;
+            color: #fff;
+
+        }
+    }
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background: #333;
+  }

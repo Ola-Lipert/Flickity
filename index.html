@@ -12,11 +12,11 @@
 	</head>
 	<body>
         <p>
-            <button><a href="#carousel-cell1">1</a></button>
-            <button><a href="#carousel-cell2">2</a></button>
-            <button><a href="#carousel-cell3">3</a></button>
-            <button><a href="#carousel-cell4">4</a></button>
-            <button><a href="#carousel-cell5">5</a></button>
+            <button class="btn-cells"><a href="#carousel-cell1">1</a></button>
+            <button class="btn-cells"><a href="#carousel-cell2">2</a></button>
+            <button class="btn-cells"><a href="#carousel-cell3">3</a></button>
+            <button class="btn-cells"><a href="#carousel-cell4">4</a></button>
+            <button class="btn-cells"><a href="#carousel-cell5">5</a></button>
         </p>
         <div class="carousel">
             <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/gdansk.png')">
@@ -44,7 +44,12 @@
                     <h2>Warszawa</h2>
                 </div>
             </div>
-        </div>   
+        </div>
+        
+        <div class="progress-bar"></div>
+        <div class="button-group">
+            <button class="restart-button">Restart</button>
+        </div>
 
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="js/script.js"></script>

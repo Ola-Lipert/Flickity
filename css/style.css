@@ -6,7 +6,7 @@ p .btn-cells { background-color: #fff; }
 
 p .btn-cells a { color: #333; text-decoration: none; }
 
-.carousel { background: #EEE; }
+.carousel { background: #fff; }
 
 .carousel-cell { position: relative; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 100%; height: 600px; margin-right: 10px; background-size: cover; }
 
@@ -18,6 +18,6 @@ p .btn-cells a { color: #333; text-decoration: none; }
 
 .button-group .restart-button { position: absolute; left: 5em; bottom: 2.5em; transition: 0.5s; }
 
-.button-group .restart-button:hover { background-color: black; color: #fff; }
+.button-group .restart-button:hover { background-color: #333; color: #fff; }
 
 .progress-bar { height: 20px; width: 0; background: #333; }

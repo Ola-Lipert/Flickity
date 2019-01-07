@@ -1,6 +1,21 @@
 'use strict';
 
+(function () {
+    // mustache
+    var templateCarousel = document.getElementById('template-carousel').innerHTML;
+    var carousel = document.querySelector('.carousel');
 
+    Mustache.parse(templateCarousel);
+
+    var carouselItems = '';
+
+    for(var i = 0; i < data.length; i++){
+        carouselItems += Mustache.render(templateCarousel, data[i]);
+        }
+    
+    carousel.innerHTML = carouselItems;
+
+    // Flickity
     var elem = document.querySelector('.carousel');
 
     var flkty = new Flickity( elem, {
@@ -26,6 +41,6 @@
     progressBar.style.width = progress * 100 + '%';
     });
 
-
+})();
     
 

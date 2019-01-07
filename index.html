@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html land="pl">
+<html>
 	<head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,45 +12,59 @@
 	</head>
 	<body>
         <p>
-            <button class="btn-cells"><a href="#carousel-cell1">1</a></button>
-            <button class="btn-cells"><a href="#carousel-cell2">2</a></button>
-            <button class="btn-cells"><a href="#carousel-cell3">3</a></button>
-            <button class="btn-cells"><a href="#carousel-cell4">4</a></button>
-            <button class="btn-cells"><a href="#carousel-cell5">5</a></button>
+            <a href="#carousel-cell1">1</a>
+            <a href="#carousel-cell2">2</a>
+            <a href="#carousel-cell3">3</a>
+            <a href="#carousel-cell4">4</a>
+            <a href="#carousel-cell5">5</a>
         </p>
-        <div class="carousel">
-            <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/gdansk.png')">
+
+        <div class="carousel"></div>
+
+        <script id="template-carousel" type="x-tmpl-mustache">
+            <div class="carousel-cell" style="background-image: url({{image}}">
                 <div class="container">
-                    <h2>Gdańsk</h2>
+                    <h2>{{title}}</h2>
+                    {{{description}}}
                 </div>
             </div>
-            <div class="carousel-cell" id="carousel-cell2" style="background-image: url('images/krakow.png')">
-                <div class="container">
-                    <h2>Krakow</h2>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell3" style="background-image: url('images/lublin.png')">
-                <div class="container">
-                    <h2>Lublin</h2>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell4" style="background-image: url('images/wroclaw.png')">
-                <div class="container">
-                    <h2>Wrocław</h2>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell5" style="background-image: url('images/warsaw.png')">
-                <div class="container">
-                    <h2>Warszawa</h2>
-                </div>
-            </div>
-        </div>
-        
+        </script>
+
+        <script>
+            var data = [
+                {
+                    title: 'Gdańsk',
+                    description: '<p>Woj. pomorskie</p>',
+                    image: 'images/gdansk.png',
+                },
+                {
+                    title: 'Krakow',
+                    description: '<p>Woj. małopolskie</p>',
+                    image: 'images/krakow.png',
+                },
+                {
+                    title: 'Lublin',
+                    description: '<p>Woj. lubelskie</p>',
+                    image: 'images/lublin.png',
+                },
+                {
+                    title: 'Wrocław',
+                    description: '<p>Woj. dolnośląskie</p>',
+                    image: 'images/wroclaw.png',
+                },
+                {
+                    title: 'Warszawa',
+                    description: '<p>Woj. mazowieckie</p>',
+                    image: 'images/warsaw.png',
+                }
+            ];
+        </script>
         <div class="progress-bar"></div>
         <div class="button-group">
             <button class="restart-button">Restart</button>
         </div>
 
+        <script src="vendor/mustache.js"></script>
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="js/script.js"></script>
     </body>            

@@ -2,9 +2,7 @@
 
 body { font-family: 'Open Sans', sans-serif; }
 
-p .btn-cells { background-color: #fff; }
-
-p .btn-cells a { color: #333; text-decoration: none; }
+p a { color: #333; text-decoration: none; }
 
 .carousel { background: #fff; }
 

@@ -44,13 +44,11 @@
     //Google Maps
     window.initMap = function() {
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 12,
             center: data[0].coords
         });
 
         var markers = [];
-
-        console.log(data);
 
         for (let i =0; i < data.length; i++) {
             markers[i] = new google.maps.Marker({
@@ -58,9 +56,17 @@
                 map: map 
 
             });
-        
             
+            markers[i].addListener('click', function() {
+                flkty.select(i);
+            });
+        
         }
+
+        flkty.on('change', function (a) {
+            map.panTo(data[a].coords);
+            map.setZoom(12);
+        });
     }
 
 })();

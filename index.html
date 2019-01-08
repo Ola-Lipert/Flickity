@@ -29,26 +29,46 @@
                     title: 'Gdańsk',
                     description: '<p>Woj. pomorskie</p>',
                     image: 'images/gdansk.png',
+                    coords: {
+                        lat: 54.348198,
+                        lng: 18.654795
+                    }
                 },
                 {
                     title: 'Krakow',
                     description: '<p>Woj. małopolskie</p>',
                     image: 'images/krakow.png',
+                    coords: {
+                        lat: 50.064292,
+                        lng: 19.943785
+                    }
                 },
                 {
                     title: 'Lublin',
                     description: '<p>Woj. lubelskie</p>',
                     image: 'images/lublin.png',
+                    coords: {
+                        lat: 51.242451,
+                        lng: 22.569342
+                    }
                 },
                 {
                     title: 'Wrocław',
                     description: '<p>Woj. dolnośląskie</p>',
                     image: 'images/wroclaw.png',
+                    coords: {
+                        lat: 51.110908,
+                        lng: 17.033008
+                    }
                 },
                 {
                     title: 'Warszawa',
                     description: '<p>Woj. mazowieckie</p>',
                     image: 'images/warsaw.png',
+                    coords: {
+                        lat: 52.230707,
+                        lng: 21.024106
+                    }
                 }
             ];
         </script>
@@ -57,8 +77,11 @@
             <button class="restart-button">Restart</button>
         </div>
 
+        <div id="map"></div>
+
         <script src="vendor/mustache.js"></script>
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUdLWy40Ioh9bMydwm1cuRj9dKrirZqqY&callback=initMap"></script>
     </body>            
 </html>  

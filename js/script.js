@@ -1,6 +1,24 @@
 'use strict';
 
 (function () {
+    //Google Maps
+    window.initMap = function() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: data[0].coords
+        });
+
+        var markers = [];
+
+        for (let i =0; i < data.lenght; i++) {
+            markers[i] = new google.maps.Marker({
+                position: data[i].coords,
+                map: map 
+            });
+            
+        }
+    }
+
     // mustache
     var templateCarousel = document.getElementById('template-carousel').innerHTML;
     var carousel = document.querySelector('.carousel');
@@ -9,7 +27,7 @@
 
     var carouselItems = '';
 
-    for(var i = 0; i < data.length; i++){
+    for(var i = 0; i < data.length; i++) {
         carouselItems += Mustache.render(templateCarousel, data[i]);
         }
     
@@ -20,10 +38,10 @@
 
     var flkty = new Flickity( elem, {
     // options
-    cellAlign: 'left',
-    contain: true,
-    hash: true,
-    pageDots: false
+        cellAlign: 'left',
+        contain: true,
+        hash: true,
+        pageDots: false
     });
 
     // restart
@@ -37,8 +55,8 @@
     var progressBar = document.querySelector('.progress-bar')
 
     flkty.on( 'scroll', function( progress ) {
-    progress = Math.max( 0, Math.min( 1, progress ) );
-    progressBar.style.width = progress * 100 + '%';
+        progress = Math.max( 0, Math.min( 1, progress ) );
+        progressBar.style.width = progress * 100 + '%';
     });
 
 })();

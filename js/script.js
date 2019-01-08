@@ -1,24 +1,6 @@
 'use strict';
 
 (function () {
-    //Google Maps
-    window.initMap = function() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: data[0].coords
-        });
-
-        var markers = [];
-
-        for (let i =0; i < data.lenght; i++) {
-            markers[i] = new google.maps.Marker({
-                position: data[i].coords,
-                map: map 
-            });
-            
-        }
-    }
-
     // mustache
     var templateCarousel = document.getElementById('template-carousel').innerHTML;
     var carousel = document.querySelector('.carousel');
@@ -58,6 +40,28 @@
         progress = Math.max( 0, Math.min( 1, progress ) );
         progressBar.style.width = progress * 100 + '%';
     });
+
+    //Google Maps
+    window.initMap = function() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: data[0].coords
+        });
+
+        var markers = [];
+
+        console.log(data);
+
+        for (let i =0; i < data.length; i++) {
+            markers[i] = new google.maps.Marker({
+                position: data[i].coords,
+                map: map 
+
+            });
+        
+            
+        }
+    }
 
 })();
     
